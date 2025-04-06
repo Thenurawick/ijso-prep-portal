@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowRight, BookOpen, Atom, FlaskConical, Droplets } from 'lucide-react';
+import { ArrowRight, BookOpen, Atom, FlaskConical, Droplets, BarChart3 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navbar from '@/components/Navbar';
@@ -11,21 +11,27 @@ const Chemistry = () => {
   const topics = [
     {
       title: "Physical Chemistry",
-      description: "Thermochemistry, equilibrium, and kinetics",
+      description: "Thermodynamics, kinetics, and quantum chemistry",
       icon: Atom,
       path: "/chemistry/physical"
-    },
-    {
-      title: "Organic Chemistry",
-      description: "Carbon compounds and their reactions",
-      icon: FlaskConical,
-      path: "/chemistry/organic"
     },
     {
       title: "Inorganic Chemistry",
       description: "Elements, compounds and their properties",
       icon: Droplets,
       path: "/chemistry/inorganic"
+    },
+    {
+      title: "Analytical Chemistry",
+      description: "Methods for analyzing chemical substances",
+      icon: BarChart3,
+      path: "/chemistry/analytical"
+    },
+    {
+      title: "Organic Chemistry",
+      description: "Carbon compounds and their reactions",
+      icon: FlaskConical,
+      path: "/chemistry/organic"
     }
   ];
 
@@ -54,7 +60,7 @@ const Chemistry = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h2 className="text-2xl font-bold mb-6">Topics</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {topics.map((topic) => (
               <Card key={topic.title} className="h-full flex flex-col">
                 <CardHeader>

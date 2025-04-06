@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowRight, BookOpen, Atoms, FlaskConical, Droplets } from 'lucide-react';
+import { ArrowRight, BookOpen, Atom, FlaskConical, Droplets } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navbar from '@/components/Navbar';
@@ -12,7 +12,7 @@ const Chemistry = () => {
     {
       title: "Physical Chemistry",
       description: "Thermochemistry, equilibrium, and kinetics",
-      icon: Atoms,
+      icon: Atom,
       path: "/chemistry/physical"
     },
     {

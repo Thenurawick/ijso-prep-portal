@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowRight, BookOpen, Heart, Dna, Flower2 } from 'lucide-react';
+import { ArrowRight, BookOpen, Dna, Flower2, Heart, Droplets, Rabbit } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navbar from '@/components/Navbar';
@@ -10,22 +10,34 @@ import { Link } from 'react-router-dom';
 const Biology = () => {
   const topics = [
     {
-      title: "Cell Biology",
-      description: "Cell structure, function, and processes",
-      icon: Flower2,
-      path: "/biology/cell-biology"
-    },
-    {
       title: "Genetics",
       description: "Inheritance, DNA, and genetic mechanisms",
       icon: Dna,
       path: "/biology/genetics"
     },
     {
-      title: "Physiology",
-      description: "Organ systems and their functions",
+      title: "Botany",
+      description: "Plant structure, function, and diversity",
+      icon: Flower2,
+      path: "/biology/botany"
+    },
+    {
+      title: "Zoology",
+      description: "Animal structure, function, and behavior",
+      icon: Rabbit,
+      path: "/biology/zoology"
+    },
+    {
+      title: "Cell Biology",
+      description: "Cell structure, function, and processes",
+      icon: Droplets,
+      path: "/biology/cell-biology"
+    },
+    {
+      title: "Ecology",
+      description: "Interactions between organisms and environment",
       icon: Heart,
-      path: "/biology/physiology"
+      path: "/biology/ecology"
     }
   ];
 
@@ -54,7 +66,7 @@ const Biology = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h2 className="text-2xl font-bold mb-6">Topics</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
             {topics.map((topic) => (
               <Card key={topic.title} className="h-full flex flex-col">
                 <CardHeader>

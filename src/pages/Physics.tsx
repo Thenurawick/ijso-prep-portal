@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
 
 const Physics = () => {
   const topics = [
@@ -13,37 +14,43 @@ const Physics = () => {
       title: "Mechanics",
       description: "Forces, motion, energy, and momentum",
       icon: Compass,
-      path: "/physics/mechanics"
+      path: "/physics/mechanics",
+      image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=500&auto=format&fit=crop"
     },
     {
       title: "Waves",
       description: "Sound, light, and wave phenomena",
       icon: Compass,
-      path: "/physics/waves"
+      path: "/physics/waves",
+      image: "https://images.unsplash.com/photo-1590751591468-6ba4f6c249a7?q=80&w=500&auto=format&fit=crop"
     },
     {
       title: "Thermodynamics",
       description: "Heat, temperature, and energy transfer",
       icon: Thermometer,
-      path: "/physics/thermodynamics"
+      path: "/physics/thermodynamics",
+      image: "https://images.unsplash.com/photo-1520962880247-cfaf541c8724?q=80&w=500&auto=format&fit=crop"
     },
     {
       title: "Electricity & Magnetism",
       description: "Electric fields, circuits, and magnetic phenomena",
       icon: Zap,
-      path: "/physics/electricity"
+      path: "/physics/electricity",
+      image: "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?q=80&w=500&auto=format&fit=crop"
     },
     {
       title: "Modern Physics",
       description: "Quantum mechanics, relativity, and nuclear physics",
       icon: Compass,
-      path: "/physics/modern-physics"
+      path: "/physics/modern-physics",
+      image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=500&auto=format&fit=crop"
     },
     {
       title: "Astrophysics",
       description: "Stars, galaxies, and cosmology",
       icon: Compass,
-      path: "/physics/astrophysics"
+      path: "/physics/astrophysics",
+      image: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=500&auto=format&fit=crop"
     }
   ];
 
@@ -52,8 +59,16 @@ const Physics = () => {
       <Navbar />
       
       <main className="flex-grow">
-        <div className="bg-blue-600 text-white py-12">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-blue-600 text-white py-12 relative overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-600 opacity-90"></div>
+            <img 
+              src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=1200&auto=format&fit=crop" 
+              alt="Physics background" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="flex items-center gap-3 mb-4">
               <Link to="/" className="text-white/80 hover:text-white text-sm flex items-center gap-1">
                 Home
@@ -61,39 +76,79 @@ const Physics = () => {
               <span>/</span>
               <span className="text-sm">Physics</span>
             </div>
-            <h1 className="text-4xl font-bold mb-4">Physics</h1>
-            <p className="text-xl max-w-3xl">
+            <motion.h1 
+              className="text-4xl font-bold mb-4"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Physics
+            </motion.h1>
+            <motion.p 
+              className="text-xl max-w-3xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
               Explore fundamental principles governing the universe through mechanics, waves, thermodynamics, 
               electricity, modern physics, and astrophysics. Practice problems designed for IJSO competition preparation.
-            </p>
+            </motion.p>
           </div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h2 className="text-2xl font-bold mb-6">Topics</h2>
+          <motion.h2 
+            className="text-2xl font-bold mb-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            Topics
+          </motion.h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            {topics.map((topic) => (
-              <Card key={topic.title} className="h-full flex flex-col">
-                <CardHeader>
-                  <div className="flex items-center gap-2 mb-2">
-                    <topic.icon className="h-5 w-5 text-blue-600" />
-                    <CardTitle>{topic.title}</CardTitle>
+            {topics.map((topic, index) => (
+              <motion.div
+                key={topic.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
+              >
+                <Card className="h-full flex flex-col overflow-hidden">
+                  <div className="h-40 overflow-hidden">
+                    <img 
+                      src={topic.image} 
+                      alt={topic.title} 
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                    />
                   </div>
-                  <CardDescription>{topic.description}</CardDescription>
-                </CardHeader>
-                <CardContent className="flex-grow flex flex-col justify-end">
-                  <Button variant="outline" asChild className="w-full justify-between mt-4">
-                    <Link to={topic.path}>
-                      Explore Topic <ArrowRight className="h-4 w-4" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
+                  <CardHeader>
+                    <div className="flex items-center gap-2 mb-2">
+                      <topic.icon className="h-5 w-5 text-blue-600" />
+                      <CardTitle>{topic.title}</CardTitle>
+                    </div>
+                    <CardDescription>{topic.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent className="flex-grow flex flex-col justify-end">
+                    <Button variant="outline" asChild className="w-full justify-between mt-4 group">
+                      <Link to={topic.path}>
+                        Explore Topic 
+                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
           
-          <div className="bg-blue-50 p-6 rounded-lg border border-blue-100">
+          <motion.div 
+            className="bg-blue-50 p-6 rounded-lg border border-blue-100"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
             <div className="flex items-start gap-4">
               <div className="bg-blue-100 p-2 rounded-full">
                 <BookOpen className="h-6 w-6 text-blue-600" />
@@ -104,12 +159,12 @@ const Physics = () => {
                   Start with our carefully curated collection of IJSO-style physics problems. 
                   Select a topic above to begin exploring subtopics and practice questions.
                 </p>
-                <Button variant="default" className="bg-blue-600 hover:bg-blue-700">
+                <Button variant="default" className="bg-blue-600 hover:bg-blue-700 transition-colors duration-300">
                   View All Physics Problems
                 </Button>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </main>
       

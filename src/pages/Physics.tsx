@@ -16,6 +16,12 @@ const Physics = () => {
       path: "/physics/mechanics"
     },
     {
+      title: "Waves",
+      description: "Sound, light, and wave phenomena",
+      icon: Compass,
+      path: "/physics/waves"
+    },
+    {
       title: "Thermodynamics",
       description: "Heat, temperature, and energy transfer",
       icon: Thermometer,
@@ -26,6 +32,18 @@ const Physics = () => {
       description: "Electric fields, circuits, and magnetic phenomena",
       icon: Zap,
       path: "/physics/electricity"
+    },
+    {
+      title: "Modern Physics",
+      description: "Quantum mechanics, relativity, and nuclear physics",
+      icon: Compass,
+      path: "/physics/modern-physics"
+    },
+    {
+      title: "Astrophysics",
+      description: "Stars, galaxies, and cosmology",
+      icon: Compass,
+      path: "/physics/astrophysics"
     }
   ];
 
@@ -45,8 +63,8 @@ const Physics = () => {
             </div>
             <h1 className="text-4xl font-bold mb-4">Physics</h1>
             <p className="text-xl max-w-3xl">
-              Explore fundamental principles governing the universe through mechanics, thermodynamics, 
-              electricity, and more. Practice problems designed for IJSO competition preparation.
+              Explore fundamental principles governing the universe through mechanics, waves, thermodynamics, 
+              electricity, modern physics, and astrophysics. Practice problems designed for IJSO competition preparation.
             </p>
           </div>
         </div>

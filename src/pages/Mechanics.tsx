@@ -24,7 +24,7 @@ const Mechanics = () => {
       content: "Explore the three fundamental laws that describe the relationship between motion and forces acting on a body."
     },
     {
-      title: "Forces and Friction",
+      title: "Forces and friction",
       content: "Study different types of forces and the role of friction in mechanical systems."
     },
     {

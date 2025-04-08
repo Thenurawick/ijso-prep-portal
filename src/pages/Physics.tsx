@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowRight, BookOpen, Compass, Thermometer, Zap } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -99,7 +98,7 @@ const Physics = () => {
         "Heating Curves, Cooling Curves", 
         "Zeroth Law of Thermodynamics", 
         "First Law of Thermodynamics", 
-        "Heat Engines and Efficiency"
+        "Heat Engines"
       ]
     },
     {

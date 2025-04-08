@@ -11,6 +11,10 @@ import Biology from "./pages/Biology";
 import Mechanics from "./pages/Mechanics";
 import Waves from "./pages/Waves";
 import Light from "./pages/Light";
+import Thermodynamics from "./pages/Thermodynamics";
+import Electricity from "./pages/Electricity";
+import ModernPhysics from "./pages/ModernPhysics";
+import Astrophysics from "./pages/Astrophysics";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +33,10 @@ const App = () => (
           <Route path="/physics/mechanics" element={<Mechanics />} />
           <Route path="/physics/waves" element={<Waves />} />
           <Route path="/physics/light" element={<Light />} />
+          <Route path="/physics/thermodynamics" element={<Thermodynamics />} />
+          <Route path="/physics/electricity" element={<Electricity />} />
+          <Route path="/physics/modern-physics" element={<ModernPhysics />} />
+          <Route path="/physics/astrophysics" element={<Astrophysics />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -15,42 +15,155 @@ const Physics = () => {
       description: "Forces, motion, energy, and momentum",
       icon: Compass,
       path: "/physics/mechanics",
-      image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=500&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=500&auto=format&fit=crop",
+      subtopics: [
+        "Vectors", 
+        "Newton's Laws", 
+        "Forces and friction", 
+        "Torque & Equilibrium", 
+        "Center of Mass", 
+        "Kinematic Formulas", 
+        "Nature of Energy and Energy Conservation", 
+        "Forms of Energy", 
+        "Sources of Energy", 
+        "Mechanical Energy & Work", 
+        "Power & Efficiency", 
+        "Momentum and Conservation of Momentum", 
+        "Elastic & Inelastic Collisions", 
+        "Centripetal Force", 
+        "Circular Kinematics", 
+        "Pressure & Pascal's Law", 
+        "Buoyancy & Archimedes' Principle", 
+        "Bernoulli's Principle", 
+        "Hooke's Law and Elastic Motion", 
+        "Harmonic Motion and Angular Frequency"
+      ]
     },
     {
       title: "Waves",
       description: "Sound, light, and wave phenomena",
       icon: Compass,
       path: "/physics/waves",
-      image: "https://images.unsplash.com/photo-1590751591468-6ba4f6c249a7?q=80&w=500&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1590751591468-6ba4f6c249a7?q=80&w=500&auto=format&fit=crop",
+      subtopics: [
+        "Wave Properties", 
+        "Transersal and Logitudinal Waves", 
+        "Superposition of Waves", 
+        "Interference of Waves", 
+        "Reflection and Transmission", 
+        "Refraction", 
+        "Standing Waves", 
+        "Resonance", 
+        "Sound Waves and Speed of Sound", 
+        "Doppler Effect", 
+        "Beats and Harmonics", 
+        "Intensity and Loudness", 
+        "Wave Equation"
+      ]
+    },
+    {
+      title: "Light",
+      description: "Properties and behavior of light",
+      icon: Compass,
+      path: "/physics/light",
+      image: "https://images.unsplash.com/photo-1520531158340-44015069e78e?q=80&w=500&auto=format&fit=crop",
+      subtopics: [
+        "Nature of Light", 
+        "Reflection of Light", 
+        "Refraction of Light and Snell's Law", 
+        "Lenses and Mirrors", 
+        "Lens and Mirror Formula", 
+        "Magnification", 
+        "Dispersion of Light", 
+        "Colour and Filters", 
+        "Diffraction", 
+        "Interference", 
+        "Optical Instruments"
+      ]
     },
     {
       title: "Thermodynamics",
       description: "Heat, temperature, and energy transfer",
       icon: Thermometer,
       path: "/physics/thermodynamics",
-      image: "https://images.unsplash.com/photo-1520962880247-cfaf541c8724?q=80&w=500&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1520962880247-cfaf541c8724?q=80&w=500&auto=format&fit=crop",
+      subtopics: [
+        "Temperature Scales", 
+        "Thermal Equilibrium", 
+        "Mechanisms of Heat Transfer", 
+        "Thermal Expansion", 
+        "Specific Heat Capacity", 
+        "Calorimeter", 
+        "Change in States", 
+        "Latent Heat", 
+        "Heating Curves, Cooling Curves", 
+        "Zeroth Law of Thermodynamics", 
+        "First Law of Thermodynamics", 
+        "Heat Engines and Efficiency"
+      ]
     },
     {
       title: "Electricity & Magnetism",
       description: "Electric fields, circuits, and magnetic phenomena",
       icon: Zap,
       path: "/physics/electricity",
-      image: "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?q=80&w=500&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?q=80&w=500&auto=format&fit=crop",
+      subtopics: [
+        "Electric Charge and Properties", 
+        "Coulomb's Law", 
+        "Electric Field", 
+        "Electric Potential and Potential Energy", 
+        "Conductors and Insulators", 
+        "Charing by Induction and Friction", 
+        "Ohm's Law", 
+        "Resistivity and Factors Affecting Resistance", 
+        "Electric Power and Energy", 
+        "Series and Parallel Circuits", 
+        "Kirchoff's Laws", 
+        "Capacitors and Capacitance", 
+        "Magnetic Fields and Field Lines", 
+        "Magnetic Force on a Current", 
+        "Right Hand Rule", 
+        "Magnetic Force due to a Wire, Loop, Solenoid", 
+        "Electromagnetic Induction", 
+        "Faraday's Law of Induction", 
+        "Lenz's Law", 
+        "Motional EMF", 
+        "Transformers", 
+        "Applications: Electric Motors, Generators"
+      ]
     },
     {
       title: "Modern Physics",
       description: "Quantum mechanics, relativity, and nuclear physics",
       icon: Compass,
       path: "/physics/modern-physics",
-      image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=500&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=500&auto=format&fit=crop",
+      subtopics: [
+        "Structure of the Particles and the Atoms", 
+        "Bohr Model of the Atom", 
+        "Types of Radioactivity Decay", 
+        "Properties of Radiation", 
+        "Half-Life and Radioactive Decay Law", 
+        "Nuclear Fission and Fusion", 
+        "Photoelectric Effect", 
+        "Wave - Particle Duality", 
+        "de Broglie Wavelength", 
+        "Basic Laser Principle"
+      ]
     },
     {
       title: "Astrophysics",
       description: "Stars, galaxies, and cosmology",
       icon: Compass,
       path: "/physics/astrophysics",
-      image: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=500&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=500&auto=format&fit=crop",
+      subtopics: [
+        "Structure of the Universe", 
+        "Solar System", 
+        "Celestial Mechanics", 
+        "Gravity & Kepler's Laws"
+      ]
     }
   ];
 
@@ -90,7 +203,7 @@ const Physics = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Explore fundamental principles governing the universe through mechanics, waves, thermodynamics, 
+              Explore fundamental principles governing the universe through mechanics, waves, light, thermodynamics, 
               electricity, modern physics, and astrophysics. Practice problems designed for IJSO competition preparation.
             </motion.p>
           </div>

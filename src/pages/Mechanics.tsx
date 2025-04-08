@@ -36,7 +36,7 @@ const Mechanics = () => {
       content: "Learn how to determine the center of mass for different objects and systems."
     },
     {
-      title: "Kinematic Formula",
+      title: "Kinematic Formulas",
       content: "Master the equations describing the motion of objects without considering the causes of motion."
     },
     {
@@ -52,11 +52,19 @@ const Mechanics = () => {
       content: "Learn about various energy sources and their applications in physical systems."
     },
     {
+      title: "Mechanical Energy & Work",
+      content: "Understand the relationship between work, energy, and the conservation of mechanical energy."
+    },
+    {
+      title: "Power & Efficiency",
+      content: "Study the rate at which work is done and the concept of efficiency in energy conversion."
+    },
+    {
       title: "Momentum and Conservation of Momentum",
       content: "Understand linear momentum and how it is conserved in isolated systems."
     },
     {
-      title: "Elastic and Inelastic Collisions",
+      title: "Elastic & Inelastic Collisions",
       content: "Explore different types of collisions and their relationship to energy and momentum conservation."
     },
     {
@@ -67,6 +75,26 @@ const Mechanics = () => {
       title: "Circular Kinematics",
       content: "Master the concepts of angular velocity, acceleration, and related variables in circular motion."
     },
+    {
+      title: "Pressure & Pascal's Law",
+      content: "Understand fluid pressure and Pascal's principle for pressure transmission in fluids."
+    },
+    {
+      title: "Buoyancy & Archimedes' Principle",
+      content: "Study the upward force exerted by fluids on immersed objects and Archimedes' principle."
+    },
+    {
+      title: "Bernoulli's Principle",
+      content: "Explore the relationship between fluid pressure, velocity, and height in flowing fluids."
+    },
+    {
+      title: "Hooke's Law and Elastic Motion",
+      content: "Study the fundamental relationship between force, displacement, and the spring constant in elastic systems."
+    },
+    {
+      title: "Harmonic Motion and Angular Frequency",
+      content: "Understand simple harmonic motion, angular frequency, period, and amplitude in oscillating systems."
+    }
   ];
 
   return (
@@ -110,7 +138,8 @@ const Mechanics = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               Explore the fundamental principles of classical mechanics, including Newton's laws, forces, 
-              energy, momentum, and circular motion. Build a solid foundation for solving physics problems.
+              energy, momentum, fluid mechanics, and harmonic motion. Build a solid foundation for solving 
+              physics problems.
             </motion.p>
           </div>
         </div>

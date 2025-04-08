@@ -16,32 +16,56 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const Waves = () => {
   const subsections = [
     {
-      title: "Hooke's Law and Elastic Motion",
-      content: "Study the fundamental relationship between force, displacement, and the spring constant in elastic systems."
+      title: "Wave Properties",
+      content: "Study the fundamental properties of waves including amplitude, frequency, wavelength, and period."
     },
     {
-      title: "Harmonic Motion and Angular Frequency",
-      content: "Understand simple harmonic motion, angular frequency, period, and amplitude in oscillating systems."
-    },
-    {
-      title: "Transversal and Longitudinal Waves",
+      title: "Transersal and Logitudinal Waves",
       content: "Explore different types of wave propagation and their characteristics in various mediums."
-    },
-    {
-      title: "Geometric Properties of Waves",
-      content: "Learn about wavelength, amplitude, frequency, and other geometric aspects of wave motion."
     },
     {
       title: "Superposition of Waves",
       content: "Study how multiple waves interact and combine to form complex wave patterns."
     },
     {
-      title: "Beats and Standing Waves",
-      content: "Understand interference patterns, beat frequency, and the formation of standing waves in constrained systems."
+      title: "Interference of Waves",
+      content: "Understand constructive and destructive interference patterns created when waves overlap."
     },
     {
-      title: "Sound",
-      content: "Explore sound waves, their properties, and behavior in different environments and situations."
+      title: "Reflection and Transmission",
+      content: "Examine how waves behave when they encounter boundaries between different media."
+    },
+    {
+      title: "Refraction",
+      content: "Study how waves change direction when they pass from one medium to another."
+    },
+    {
+      title: "Standing Waves",
+      content: "Explore the formation of stationary wave patterns in constrained systems."
+    },
+    {
+      title: "Resonance",
+      content: "Understand how systems respond to external forces at their natural frequencies."
+    },
+    {
+      title: "Sound Waves and Speed of Sound",
+      content: "Study the properties of sound waves and factors affecting the speed of sound in different media."
+    },
+    {
+      title: "Doppler Effect",
+      content: "Examine the change in frequency of waves observed when the source and observer are in relative motion."
+    },
+    {
+      title: "Beats and Harmonics",
+      content: "Understand interference patterns, beat frequency, and the formation of harmonic sequences."
+    },
+    {
+      title: "Intensity and Loudness",
+      content: "Study the energy carried by waves and how it relates to perceived loudness in sound."
+    },
+    {
+      title: "Wave Equation",
+      content: "Explore the mathematical description of wave propagation and its applications."
     }
   ];
 
@@ -85,8 +109,8 @@ const Waves = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Explore wave phenomena including harmonic motion, wave properties, interference, 
-              and sound. Master the mathematics and physics principles behind wave behavior in 
+              Explore wave phenomena including wave properties, interference, reflection, refraction,
+              resonance, and sound. Master the mathematics and physics principles behind wave behavior in 
               various physical systems.
             </motion.p>
           </div>
@@ -157,7 +181,7 @@ const Waves = () => {
                 <h3 className="text-lg font-medium mb-2">Ready to practice wave physics?</h3>
                 <p className="text-muted-foreground mb-4">
                   Apply your knowledge with our collection of IJSO-style wave problems. 
-                  Test your understanding of harmonic motion, wave interference, and sound.
+                  Test your understanding of wave properties, interference, resonance, and sound phenomena.
                 </p>
                 <Button variant="default" className="bg-blue-600 hover:bg-blue-700 transition-colors duration-300">
                   View Waves Practice Problems

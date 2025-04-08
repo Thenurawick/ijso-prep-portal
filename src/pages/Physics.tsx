@@ -44,7 +44,7 @@ const Physics = () => {
       description: "Sound, light, and wave phenomena",
       icon: Compass,
       path: "/physics/waves",
-      image: "https://images.unsplash.com/photo-1590751591468-6ba4f6c249a7?q=80&w=500&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1590751591468-6ba6c249a6ba?q=80&w=500&auto=format&fit=crop",
       subtopics: [
         "Wave Properties", 
         "Transersal and Logitudinal Waves", 

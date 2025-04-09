@@ -9,6 +9,33 @@ import { Link } from 'react-router-dom';
 import { Separator } from "@/components/ui/separator";
 
 const ChemicalReactions = () => {
+  const topics = [
+    {
+      title: "Combination Reactions",
+      description: "Reactions where two or more substances combine to form a single product."
+    },
+    {
+      title: "Decomposition Reactions",
+      description: "Reactions where a single compound breaks down into simpler substances."
+    },
+    {
+      title: "Displacement Reactions",
+      description: "Reactions where an element replaces another in a compound."
+    },
+    {
+      title: "Redox Reactions",
+      description: "Reactions involving electron transfer between reactants."
+    },
+    {
+      title: "Activity Series of Metals",
+      description: "Hierarchical classification of metals based on their reactivity."
+    },
+    {
+      title: "Exothermic and Endothermic Reactions",
+      description: "Reactions that release or absorb energy in the form of heat."
+    }
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -40,12 +67,18 @@ const ChemicalReactions = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="prose max-w-none mb-8">
-            <h2>Coming Soon</h2>
-            <p>
-              We're currently developing comprehensive content for this topic. Check back soon for detailed 
-              explanations, interactive diagrams, and practice problems on chemical reactions.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {topics.map((topic, index) => (
+              <Card key={index} className="overflow-hidden hover:shadow-md transition-shadow">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">{topic.title}</h3>
+                  <p className="text-muted-foreground mb-6">{topic.description}</p>
+                  <Button variant="outline" className="w-full">
+                    Explore Topic
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
           </div>
           
           <Separator className="my-8" />

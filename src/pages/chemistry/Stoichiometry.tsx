@@ -9,6 +9,37 @@ import { Link } from 'react-router-dom';
 import { Separator } from "@/components/ui/separator";
 
 const Stoichiometry = () => {
+  const topics = [
+    {
+      title: "Mole Concept",
+      description: "Understanding the basic unit for measuring substance amount in chemistry."
+    },
+    {
+      title: "Molar Mass and Molecular Mass",
+      description: "Calculating the mass of one mole of a substance or molecule."
+    },
+    {
+      title: "Empirical and Molecular Formula",
+      description: "Determining the simplest and actual ratio of atoms in a compound."
+    },
+    {
+      title: "Balanced Chemical Equations",
+      description: "Ensuring mass conservation in chemical reaction representations."
+    },
+    {
+      title: "Limiting Reactants",
+      description: "Identifying which reactant determines the maximum product yield."
+    },
+    {
+      title: "Percentage Yield and Purity",
+      description: "Calculating actual vs. theoretical yields and substance purity."
+    },
+    {
+      title: "Concentration",
+      description: "Measuring the amount of solute dissolved in a specific volume of solution."
+    }
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -40,12 +71,18 @@ const Stoichiometry = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="prose max-w-none mb-8">
-            <h2>Coming Soon</h2>
-            <p>
-              We're currently developing comprehensive content for this topic. Check back soon for detailed 
-              explanations, interactive diagrams, and practice problems on stoichiometry concepts.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {topics.map((topic, index) => (
+              <Card key={index} className="overflow-hidden hover:shadow-md transition-shadow">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">{topic.title}</h3>
+                  <p className="text-muted-foreground mb-6">{topic.description}</p>
+                  <Button variant="outline" className="w-full">
+                    Explore Topic
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
           </div>
           
           <Separator className="my-8" />

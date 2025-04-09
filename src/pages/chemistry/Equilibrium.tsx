@@ -252,8 +252,8 @@ const Equilibrium = () => {
                   <div className="bg-white border border-teal-100 rounded p-3">
                     <h4 className="font-medium text-teal-700">What Keq Tells Us</h4>
                     <ul className="text-sm text-muted-foreground list-disc list-inside mt-2 space-y-1">
-                      <li>Keq >> 1: Products are favored</li>
-                      <li>Keq << 1: Reactants are favored</li>
+                      <li>Keq {'>>'} 1: Products are favored</li>
+                      <li>Keq {'<<'} 1: Reactants are favored</li>
                       <li>Keq ≈ 1: Neither is strongly favored</li>
                     </ul>
                   </div>

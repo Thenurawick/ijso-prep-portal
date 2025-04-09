@@ -17,6 +17,19 @@ import ModernPhysics from "./pages/ModernPhysics";
 import Astrophysics from "./pages/Astrophysics";
 import NotFound from "./pages/NotFound";
 
+// Chemistry routes
+import AtomicStructure from "./pages/chemistry/AtomicStructure";
+import ChemicalBonding from "./pages/chemistry/ChemicalBonding";
+import StatesOfMatter from "./pages/chemistry/StatesOfMatter";
+import Stoichiometry from "./pages/chemistry/Stoichiometry";
+import ChemicalReactions from "./pages/chemistry/ChemicalReactions";
+import AcidsBases from "./pages/chemistry/AcidsBases";
+import Thermochemistry from "./pages/chemistry/Thermochemistry";
+import Kinetics from "./pages/chemistry/Kinetics";
+import Equilibrium from "./pages/chemistry/Equilibrium";
+import Electrochemistry from "./pages/chemistry/Electrochemistry";
+import OrganicChemistry from "./pages/chemistry/OrganicChemistry";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -30,6 +43,8 @@ const App = () => (
           <Route path="/physics" element={<Physics />} />
           <Route path="/chemistry" element={<Chemistry />} />
           <Route path="/biology" element={<Biology />} />
+          
+          {/* Physics routes */}
           <Route path="/physics/mechanics" element={<Mechanics />} />
           <Route path="/physics/waves" element={<Waves />} />
           <Route path="/physics/light" element={<Light />} />
@@ -37,6 +52,20 @@ const App = () => (
           <Route path="/physics/electricity" element={<Electricity />} />
           <Route path="/physics/modern-physics" element={<ModernPhysics />} />
           <Route path="/physics/astrophysics" element={<Astrophysics />} />
+          
+          {/* Chemistry routes */}
+          <Route path="/chemistry/atomic-structure" element={<AtomicStructure />} />
+          <Route path="/chemistry/chemical-bonding" element={<ChemicalBonding />} />
+          <Route path="/chemistry/states-of-matter" element={<StatesOfMatter />} />
+          <Route path="/chemistry/stoichiometry" element={<Stoichiometry />} />
+          <Route path="/chemistry/chemical-reactions" element={<ChemicalReactions />} />
+          <Route path="/chemistry/acids-bases" element={<AcidsBases />} />
+          <Route path="/chemistry/thermochemistry" element={<Thermochemistry />} />
+          <Route path="/chemistry/kinetics" element={<Kinetics />} />
+          <Route path="/chemistry/equilibrium" element={<Equilibrium />} />
+          <Route path="/chemistry/electrochemistry" element={<Electrochemistry />} />
+          <Route path="/chemistry/organic" element={<OrganicChemistry />} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

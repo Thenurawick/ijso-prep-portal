@@ -30,9 +30,7 @@ const Index = () => {
         <section className="bg-accent/10 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl font-bold text-foreground mb-4">Theory</h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive practice materials to help you excel in the International Junior Science Olympiad.
-            </p>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">A concise and student-friendly summary of all the essential theory required for the International Junior Science Olympiad (IJSO).</p>
           </div>
         </section>
         

@@ -9,6 +9,33 @@ import { Link } from 'react-router-dom';
 import { Separator } from "@/components/ui/separator";
 
 const Thermochemistry = () => {
+  const topics = [
+    {
+      title: "Heat of Reaction, Formation, Combustion and Neutralization",
+      description: "Understanding different types of enthalpy changes in chemical reactions."
+    },
+    {
+      title: "Enthalpy Diagrams",
+      description: "Visual representations of energy changes during reactions."
+    },
+    {
+      title: "Energy Level Diagrams",
+      description: "Illustrating energy changes and transition states in reactions."
+    },
+    {
+      title: "Bond Energy",
+      description: "Energy required to break chemical bonds and its role in reaction energetics."
+    },
+    {
+      title: "Entropy",
+      description: "Understanding disorder and randomness in chemical systems."
+    },
+    {
+      title: "Gibbs Free Energy",
+      description: "Determining the spontaneity of chemical reactions."
+    }
+  ];
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -40,12 +67,18 @@ const Thermochemistry = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="prose max-w-none mb-8">
-            <h2>Coming Soon</h2>
-            <p>
-              We're currently developing comprehensive content for this topic. Check back soon for detailed 
-              explanations, interactive diagrams, and practice problems on thermochemistry.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {topics.map((topic, index) => (
+              <Card key={index} className="overflow-hidden hover:shadow-md transition-shadow">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">{topic.title}</h3>
+                  <p className="text-muted-foreground mb-6">{topic.description}</p>
+                  <Button variant="outline" className="w-full">
+                    Explore Topic
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
           </div>
           
           <Separator className="my-8" />

@@ -1,17 +1,14 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BookOpen } from 'lucide-react';
-
 const Navbar = () => {
-  return (
-    <nav className="bg-primary text-primary-foreground shadow-md">
+  return <nav className="bg-primary text-primary-foreground shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center gap-2">
               <BookOpen className="h-8 w-8" />
-              <span className="font-bold text-xl">IJSO Prep Portal</span>
+              <span className="font-bold text-xl">Theory</span>
             </Link>
           </div>
           <div className="hidden md:block">
@@ -32,8 +29,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </nav>
-  );
+    </nav>;
 };
-
 export default Navbar;

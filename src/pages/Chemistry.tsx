@@ -31,11 +31,12 @@ const Chemistry = () => {
       image: "https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?q=80&w=500&auto=format&fit=crop",
       color: "bg-green-600",
       subtopics: [
-        "Atomic Models", 
-        "Subatomic Particles", 
-        "Isotopes", 
-        "Electron Configuration", 
-        "Periodic Trends"
+        "Structure of Particles and Atoms", 
+        "Elements, Isotopes", 
+        "Relative Atomic Mass", 
+        "Electronic Configuration", 
+        "Periodic Table Layout and Trends", 
+        "Group Properties"
       ]
     },
     {
@@ -46,11 +47,12 @@ const Chemistry = () => {
       image: "https://images.unsplash.com/photo-1618504392463-80f03f02caad?q=80&w=500&auto=format&fit=crop",
       color: "bg-green-500",
       subtopics: [
-        "Ionic Bonding", 
-        "Covalent Bonding", 
-        "Polar Bonds", 
-        "Metallic Bonding", 
-        "Intermolecular Forces"
+        "Group Properties", 
+        "Types of Bonding", 
+        "Lewis Dot Structures", 
+        "Polar and Non-Polar Molecules", 
+        "Intermolecular Forces", 
+        "Molecular Shapes and VSEPR Theory"
       ]
     },
     {
@@ -61,11 +63,11 @@ const Chemistry = () => {
       image: "https://images.unsplash.com/photo-1596715671430-dd5d61b52f2c?q=80&w=500&auto=format&fit=crop",
       color: "bg-green-400",
       subtopics: [
+        "Solids, Liquids and Gas", 
+        "Latent Heat", 
+        "Heating Curves, Cooling Curves", 
         "Gas Laws", 
-        "Kinetic Theory", 
-        "Phase Changes", 
-        "Solutions", 
-        "Colligative Properties"
+        "Kinetic Molecular Theory of Gases"
       ]
     },
     {
@@ -77,10 +79,12 @@ const Chemistry = () => {
       color: "bg-emerald-600",
       subtopics: [
         "Mole Concept", 
-        "Balancing Equations", 
-        "Reaction Yield", 
-        "Limiting Reagents", 
-        "Solution Concentration"
+        "Molar Mass and Molecular Mass", 
+        "Empirical and Molecular Formula", 
+        "Balanced Chemical Equations", 
+        "Limiting Reactants", 
+        "Percentage Yield and Purity", 
+        "Concentration"
       ]
     },
     {
@@ -91,11 +95,12 @@ const Chemistry = () => {
       image: "https://images.unsplash.com/photo-1616661317531-d830b7c60a6e?q=80&w=500&auto=format&fit=crop",
       color: "bg-emerald-500",
       subtopics: [
+        "Combination Reactions", 
+        "Decomposition Reactions", 
+        "Displacement Reactions", 
         "Redox Reactions", 
-        "Precipitation Reactions", 
-        "Acid-Base Reactions", 
-        "Combustion", 
-        "Synthesis and Decomposition"
+        "Activity Series of Metals", 
+        "Exothermic and Endothermic Reactions"
       ]
     },
     {
@@ -106,11 +111,13 @@ const Chemistry = () => {
       image: "https://images.unsplash.com/photo-1589219427095-92edfd6d35f3?q=80&w=500&auto=format&fit=crop",
       color: "bg-emerald-400",
       subtopics: [
-        "pH Scale", 
-        "Strong vs. Weak", 
-        "Titration", 
-        "Buffers", 
-        "Neutralization"
+        "Varying Definitions of Acids and Bases", 
+        "Properties of Acids and Bases", 
+        "pH scale and Indicators", 
+        "Strong vs Weak Acids / Bases", 
+        "Neutralization Reactions", 
+        "Preparation of Salts", 
+        "Titrations"
       ]
     },
     {
@@ -121,11 +128,12 @@ const Chemistry = () => {
       image: "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=500&auto=format&fit=crop",
       color: "bg-teal-600",
       subtopics: [
-        "Enthalpy Changes", 
-        "Hess's Law", 
-        "Bond Energies", 
-        "Entropy and Free Energy", 
-        "Calorimetry"
+        "Heat of Reaction, Formation, Combustion and Neutralization", 
+        "Enthalphy Diagrams", 
+        "Energy Level Diagrams", 
+        "Bond Energy", 
+        "Entropy", 
+        "Gibbs Free Energy"
       ]
     },
     {
@@ -136,11 +144,9 @@ const Chemistry = () => {
       image: "https://images.unsplash.com/photo-1576086135878-de63ad3307ea?q=80&w=500&auto=format&fit=crop",
       color: "bg-teal-500",
       subtopics: [
-        "Reaction Rate", 
-        "Rate Laws", 
-        "Activation Energy", 
-        "Reaction Mechanisms", 
-        "Catalysts"
+        "Rate of Reactions", 
+        "Factors Affecting the Rate of Reactions", 
+        "Collision Theory"
       ]
     },
     {
@@ -151,11 +157,13 @@ const Chemistry = () => {
       image: "https://images.unsplash.com/photo-1603126408348-67c58368bfb6?q=80&w=500&auto=format&fit=crop",
       color: "bg-teal-400",
       subtopics: [
-        "Equilibrium Constant", 
+        "Dynamic Equilibrium Concept", 
         "Le Chatelier's Principle", 
-        "Solubility Equilibrium", 
-        "Common Ion Effect", 
-        "Complex Ion Formation"
+        "Acid Base Equilibria", 
+        "Solubility Equilibria", 
+        "Equilibrium Calculations", 
+        "Buffer Solutions", 
+        "Henderson-Hasselbalch Equation"
       ]
     },
     {
@@ -166,11 +174,11 @@ const Chemistry = () => {
       image: "https://images.unsplash.com/photo-1556126286-e4ad4b4e56de?q=80&w=500&auto=format&fit=crop",
       color: "bg-cyan-600",
       subtopics: [
-        "Redox Reactions", 
-        "Galvanic Cells", 
-        "Electrolytic Cells", 
-        "Nernst Equation", 
-        "Electroplating"
+        "Electrolysis", 
+        "Faraday's Law of Electrolysis", 
+        "Electrolytes and Non - Electrolytes", 
+        "Electrodes", 
+        "Redox Reactions in Electrolysis"
       ]
     },
     {
@@ -183,9 +191,9 @@ const Chemistry = () => {
       subtopics: [
         "Hydrocarbons", 
         "Functional Groups", 
+        "Naming Simple Organic Compounds", 
         "Isomerism", 
-        "Reaction Mechanisms", 
-        "Polymer Chemistry"
+        "Basic Organic Reactions"
       ]
     }
   ];

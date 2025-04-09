@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowRight, BookOpen, Atom, AtomIcon, Beaker, Flask, Droplets, BarChart3, FlaskConical, TestTube, Zap, Gauge, Microscope } from 'lucide-react';
+import { ArrowRight, BookOpen, Atom, AtomIcon, Beaker, TestTube2, Droplets, BarChart3, FlaskConical, TestTube, Zap, Gauge, Microscope } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navbar from '@/components/Navbar';
@@ -101,7 +101,7 @@ const Chemistry = () => {
     {
       title: "Acids, Bases and Salts",
       description: "Properties and reactions of acids and bases",
-      icon: Flask,
+      icon: TestTube2,
       path: "/chemistry/acids-bases",
       image: "https://images.unsplash.com/photo-1589219427095-92edfd6d35f3?q=80&w=500&auto=format&fit=crop",
       color: "bg-emerald-400",

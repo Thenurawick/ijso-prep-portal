@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowLeft, ArrowRight, Flask, Download, FileText, Info, Share2 } from 'lucide-react';
+import { ArrowLeft, ArrowRight, TestTube2, Download, FileText, Info, Share2 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navbar from '@/components/Navbar';
@@ -29,7 +29,7 @@ const AcidsBases = () => {
             </div>
             <div className="flex items-center gap-4">
               <div className="bg-white/10 p-3 rounded-lg">
-                <Flask className="h-8 w-8" />
+                <TestTube2 className="h-8 w-8" />
               </div>
               <h1 className="text-4xl font-bold">Acids, Bases and Salts</h1>
             </div>

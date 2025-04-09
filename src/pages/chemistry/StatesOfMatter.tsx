@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowLeft, ArrowRight, Beaker, Download, FileText, Info, Share2 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -113,22 +112,24 @@ const StatesOfMatter = () => {
                   </div>
                 </div>
                 
-                <style jsx>{`
-                  @keyframes float {
-                    0%, 100% { transform: translateY(0) translateX(0); }
-                    25% { transform: translateY(10px) translateX(5px); }
-                    50% { transform: translateY(5px) translateX(10px); }
-                    75% { transform: translateY(-5px) translateX(8px); }
-                  }
-                  
-                  @keyframes bounce {
-                    0% { transform: translate(0, 0); }
-                    25% { transform: translate(100%, 50%); }
-                    50% { transform: translate(50%, 100%); }
-                    75% { transform: translate(-50%, 50%); }
-                    100% { transform: translate(0, 0); }
-                  }
-                `}</style>
+                <style>
+                  {`
+                    @keyframes float {
+                      0%, 100% { transform: translateY(0) translateX(0); }
+                      25% { transform: translateY(10px) translateX(5px); }
+                      50% { transform: translateY(5px) translateX(10px); }
+                      75% { transform: translateY(-5px) translateX(8px); }
+                    }
+                    
+                    @keyframes bounce {
+                      0% { transform: translate(0, 0); }
+                      25% { transform: translate(100%, 50%); }
+                      50% { transform: translate(50%, 100%); }
+                      75% { transform: translate(-50%, 50%); }
+                      100% { transform: translate(0, 0); }
+                    }
+                  `}
+                </style>
                 
                 <h3>Properties of Solids</h3>
                 <ul>

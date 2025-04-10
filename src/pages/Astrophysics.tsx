@@ -14,7 +14,7 @@ const Astrophysics = () => {
   const subsections = [{
     title: "Structure of the Universe",
     content: "Explore the overall structure of the universe, including galaxies, galaxy clusters, and the large-scale structure.",
-    downloadUrl: "https://your-file-hosting-url.com/universe-structure.zip" // Replace with your actual file URL
+    downloadUrl: "/Structure-of-the-Universe.zip" // Internal URL pointing to our public directory
   }, {
     title: "Solar System",
     content: "Learn about our solar system, including the sun, planets, moons, asteroids, and comets."
@@ -36,8 +36,13 @@ const Astrophysics = () => {
       return;
     }
     
-    // Open the URL in a new tab
-    window.open(url, "_blank");
+    // Create a link element to download the file
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `${title.replace(/\s+/g, '-')}.zip`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
     
     toast({
       title: "Download Started",

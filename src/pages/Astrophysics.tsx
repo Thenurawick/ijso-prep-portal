@@ -2,7 +2,7 @@
 import React from 'react';
 import { ArrowLeft, ArrowRight, BookOpen, Download, Earth } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { motion } from "framer-motion";
@@ -11,10 +11,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "@/components/ui/use-toast";
 
 const Astrophysics = () => {
+  const navigate = useNavigate();
+  
   const subsections = [{
     title: "Structure of the Universe",
     content: "Explore the overall structure of the universe, including galaxies, galaxy clusters, and the large-scale structure.",
-    downloadUrl: "/Structure-of-the-Universe.zip" // Internal URL pointing to our public directory
+    path: "/physics/astrophysics/structure-of-universe"
   }, {
     title: "Solar System",
     content: "Learn about our solar system, including the sun, planets, moons, asteroids, and comets."
@@ -26,8 +28,8 @@ const Astrophysics = () => {
     content: "Understand gravitational forces and Kepler's laws governing the motion of planets around the sun."
   }];
   
-  const handleDownload = (title: string, url?: string) => {
-    if (!url) {
+  const handleNavigation = (title: string, path?: string) => {
+    if (!path) {
       toast({
         title: "Coming Soon",
         description: `Resources for ${title} will be available soon.`,
@@ -36,17 +38,11 @@ const Astrophysics = () => {
       return;
     }
     
-    // Create a link element to download the file
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `${title.replace(/\s+/g, '-')}.zip`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    navigate(path);
     
     toast({
-      title: "Download Started",
-      description: `Your ${title} resources are being downloaded.`,
+      title: "Loading Content",
+      description: `Loading ${title} resources.`,
       duration: 3000,
     });
   };
@@ -142,12 +138,12 @@ const Astrophysics = () => {
                           <Button 
                             variant="outline" 
                             className="group flex gap-2"
-                            onClick={() => handleDownload(subsection.title, subsection.downloadUrl)}
+                            onClick={() => handleNavigation(subsection.title, subsection.path)}
                           >
-                            {subsection.downloadUrl ? (
+                            {subsection.path ? (
                               <>
-                                <Download className="h-4 w-4 transition-transform group-hover:translate-y-1" />
-                                Download {subsection.title} Resources
+                                Learn about {subsection.title}
+                                <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
                               </>
                             ) : (
                               <>

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -13,13 +12,18 @@ const StructureOfUniverse = () => {
   useEffect(() => {
     // Fetch the HTML content from the public directory
     fetch('/structure-of-universe.html')
-      .then(response => response.text())
+      .then(response => {
+        console.log('Fetch response status:', response.status);
+        return response.text();
+      })
       .then(data => {
+        console.log('Data received, length:', data.length);
         // Extract the content we want from the HTML file (just the container content)
         const parser = new DOMParser();
         const doc = parser.parseFromString(data, 'text/html');
         const containerContent = doc.querySelector('.container')?.innerHTML;
         setHtmlContent(containerContent || '');
+        console.log('Container content found:', !!containerContent);
       })
       .catch(error => {
         console.error('Error fetching HTML content:', error);

@@ -192,4 +192,5 @@ const Astrophysics = () => {
       <Footer />
     </div>;
 };
+
 export default Astrophysics;

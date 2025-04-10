@@ -15,6 +15,7 @@ import Thermodynamics from "./pages/Thermodynamics";
 import Electricity from "./pages/Electricity";
 import ModernPhysics from "./pages/ModernPhysics";
 import Astrophysics from "./pages/Astrophysics";
+import StructureOfUniverse from "./pages/StructureOfUniverse";
 import NotFound from "./pages/NotFound";
 
 // Chemistry routes
@@ -52,6 +53,7 @@ const App = () => (
           <Route path="/physics/electricity" element={<Electricity />} />
           <Route path="/physics/modern-physics" element={<ModernPhysics />} />
           <Route path="/physics/astrophysics" element={<Astrophysics />} />
+          <Route path="/physics/astrophysics/structure-of-universe" element={<StructureOfUniverse />} />
           
           {/* Chemistry routes */}
           <Route path="/chemistry/atomic-structure" element={<AtomicStructure />} />

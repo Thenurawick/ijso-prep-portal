@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
@@ -8,6 +8,24 @@ import Footer from '@/components/Footer';
 import { motion } from "framer-motion";
 
 const StructureOfUniverse = () => {
+  const [htmlContent, setHtmlContent] = useState<string>('');
+  
+  useEffect(() => {
+    // Fetch the HTML content from the public directory
+    fetch('/structure-of-universe.html')
+      .then(response => response.text())
+      .then(data => {
+        // Extract the content we want from the HTML file (just the container content)
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(data, 'text/html');
+        const containerContent = doc.querySelector('.container')?.innerHTML;
+        setHtmlContent(containerContent || '');
+      })
+      .catch(error => {
+        console.error('Error fetching HTML content:', error);
+      });
+  }, []);
+  
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -34,6 +52,7 @@ const StructureOfUniverse = () => {
               <span>/</span>
               <span className="text-sm">Structure of the Universe</span>
             </div>
+            
             <motion.h1 
               className="text-4xl font-bold mb-4"
               initial={{ opacity: 0, y: -20 }}
@@ -71,61 +90,27 @@ const StructureOfUniverse = () => {
             </Button>
           </div>
 
-          <motion.div 
-            className="prose prose-blue max-w-none"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            {/* The content from your ZIP file will go here */}
-            <h2>Overview of the Universe</h2>
-            <p>
-              The universe is vast and contains billions of galaxies, each with billions of stars. 
-              The structure of the universe can be understood at different scales, from planets 
-              and stars to galaxies, galaxy clusters, and the cosmic web.
-            </p>
-
-            <h2>Galaxies</h2>
-            <p>
-              Galaxies are massive collections of stars, gas, dust, and dark matter, held together 
-              by gravity. They come in various shapes and sizes, including:
-            </p>
-            <ul>
-              <li><strong>Spiral galaxies</strong>: Flat, rotating disks with spiral arms</li>
-              <li><strong>Elliptical galaxies</strong>: Spherical or ellipsoidal in shape</li>
-              <li><strong>Irregular galaxies</strong>: Lack a distinct regular shape</li>
-              <li><strong>Dwarf galaxies</strong>: Smaller galaxies with fewer stars</li>
-            </ul>
-
-            <h2>Galaxy Clusters</h2>
-            <p>
-              Galaxy clusters are gravitationally bound collections of galaxies. They are the 
-              largest known gravitationally bound structures in the universe and can contain 
-              hundreds to thousands of galaxies.
-            </p>
-
-            <h2>Large-Scale Structure</h2>
-            <p>
-              On the largest scales, galaxies and galaxy clusters form a cosmic web structure, 
-              with dense regions called superclusters connected by filaments, separated by vast 
-              voids. This structure formed due to tiny fluctuations in the density of the early 
-              universe that were amplified by gravity over billions of years.
-            </p>
-
-            <h2>The Observable Universe</h2>
-            <p>
-              The observable universe is the region of space that we can theoretically observe 
-              from Earth. It extends about 46.5 billion light-years in all directions, forming 
-              a spherical volume centered on Earth.
-            </p>
-
-            <h2>The Expanding Universe</h2>
-            <p>
-              One of the most important discoveries in astrophysics is that the universe is 
-              expanding. This expansion means that galaxies are moving away from each other, 
-              and the space between them is stretching.
-            </p>
-          </motion.div>
+          {htmlContent ? (
+            <motion.div 
+              className="prose prose-blue max-w-none"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              dangerouslySetInnerHTML={{ __html: htmlContent }}
+            />
+          ) : (
+            <div className="flex justify-center py-12">
+              <div className="animate-pulse flex flex-col gap-4 w-full">
+                <div className="h-8 bg-gray-200 rounded w-1/3"></div>
+                <div className="h-4 bg-gray-200 rounded w-full"></div>
+                <div className="h-4 bg-gray-200 rounded w-full"></div>
+                <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+                <div className="h-8 bg-gray-200 rounded w-1/4 mt-4"></div>
+                <div className="h-4 bg-gray-200 rounded w-full"></div>
+                <div className="h-4 bg-gray-200 rounded w-full"></div>
+              </div>
+            </div>
+          )}
         </div>
       </main>
       

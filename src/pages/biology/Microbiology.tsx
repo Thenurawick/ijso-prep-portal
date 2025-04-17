@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowLeft, BookOpen, Microscope, Virus, FlaskConical, Bacteria, Dna } from 'lucide-react';
+import { ArrowLeft, BookOpen, Microscope, Bug, FlaskConical, Dna, Atom } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navbar from '@/components/Navbar';
@@ -13,13 +13,13 @@ const Microbiology = () => {
     {
       title: "Bacteria",
       description: "Structure, reproduction, and bacterial diseases",
-      icon: Bacteria,
+      icon: Bug,
       path: "/biology/microbiology/bacteria"
     },
     {
       title: "Viruses",
       description: "Viral structure, replication, and viral diseases",
-      icon: Virus,
+      icon: Atom,
       path: "/biology/microbiology/viruses"
     },
     {

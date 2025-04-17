@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowRight, BookOpen, Dna, Flower2, Heart, Droplets, Rabbit } from 'lucide-react';
+import { ArrowRight, BookOpen, Dna, Flower2, Heart, Droplets, Rabbit, Microscope } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Navbar from '@/components/Navbar';
@@ -44,6 +44,13 @@ const Biology = () => {
       icon: Heart,
       path: "/biology/ecology",
       image: "https://images.unsplash.com/photo-1500829243541-74b677fecc30?q=80&w=500&auto=format&fit=crop"
+    },
+    {
+      title: "Microbiology",
+      description: "Study of microorganisms and their effects",
+      icon: Microscope,
+      path: "/biology/microbiology",
+      image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=500&auto=format&fit=crop"
     }
   ];
 
@@ -99,7 +106,7 @@ const Biology = () => {
             Topics
           </motion.h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {topics.map((topic, index) => (
               <motion.div
                 key={topic.title}

@@ -31,6 +31,9 @@ import Equilibrium from "./pages/chemistry/Equilibrium";
 import Electrochemistry from "./pages/chemistry/Electrochemistry";
 import OrganicChemistry from "./pages/chemistry/OrganicChemistry";
 
+// Biology routes
+import Microbiology from "./pages/biology/Microbiology";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -67,6 +70,9 @@ const App = () => (
           <Route path="/chemistry/equilibrium" element={<Equilibrium />} />
           <Route path="/chemistry/electrochemistry" element={<Electrochemistry />} />
           <Route path="/chemistry/organic" element={<OrganicChemistry />} />
+          
+          {/* Biology routes */}
+          <Route path="/biology/microbiology" element={<Microbiology />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
